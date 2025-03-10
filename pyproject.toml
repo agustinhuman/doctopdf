@@ -1,0 +1,33 @@
+[project]
+name = "webdocstopdf"
+version = "0.1.0"
+description = "A CLI tool to export online documentation to a merged PDF."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+dependencies = [
+    "selenium>=4.29.0",
+    "PyPDF2>=3.0.1",
+    "tqdm>=4.67.1"
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+urls = { "Homepage" = "https://github.com/yourusername/webdocstopdf" }
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+[project.scripts]
+webdocstopdf = "webdocstopdf.main:main"
