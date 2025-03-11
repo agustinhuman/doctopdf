@@ -12,7 +12,7 @@ from webdocstopdf.main import (
     apply_custom_css,
     expand_collapsible,
     get_doc_page_urls,
-    get_index_links,
+    read_links_from_web,
     generate_cover_page,
     generate_index_page,
     print_pdf_page,
@@ -149,7 +149,7 @@ def test_get_index_links():
     link1 = DummyElement("Link1", "http://example.com/1")
     link2 = DummyElement("Link2", "http://example.com/2")
     driver.find_elements_return = [link1, link2]
-    links = get_index_links(driver)
+    links = read_links_from_web(driver)
     assert links == [link1, link2]
 
 

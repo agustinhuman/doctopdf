@@ -7,6 +7,15 @@ license = { file = "LICENSE" }
 authors = [
     { name = "Your Name", email = "you@example.com" }
 ]
+dependencies = [
+    "pypdf2>=3.0.1",
+    "selenium>=4.29.0",
+    "selenium-stealth>=1.0.6",
+    "tqdm>=4.67.1",
+    "undetected-chromedriver>=3.5.5",
+    "setuptools>=76.0.0",
+    "pyyaml>=6.0.2",
+]
 
 [build-system]
 requires = ["hatchling"]
