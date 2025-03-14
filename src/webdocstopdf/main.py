@@ -74,7 +74,6 @@ def apply_custom_css(driver):
 
         
         * {
-            overflow: hidden !important;
             scrollbar-width: none !important;
         }
         
@@ -247,12 +246,12 @@ def print_html_to_pdf(driver, html, print_options):
     return print_pdf_page(driver, print_options)
 
 
-def get_print_options():
+def get_print_options(zoom: float = 0.9):
     # The printing format is A4. Some browsers seem to be having problems with the native Selenium way
     # passing the size, so we're hardcoding the size instead.
     print_options = PrintOptions()
     print_options.background = True
-    print_options.scale = 0.9
+    print_options.scale = zoom
     print_options.orientation = "portrait"
     print_options.set_page_size({"height": 29.7, "width": 21.0})  # A4
     print_options.margin_top = 0.5
@@ -309,7 +308,7 @@ def main():
     page_urls = get_doc_page_urls(driver, args.input, args.selector)
     print(f"Found {len(page_urls)} pages.")
     
-    print_options = get_print_options()
+    print_options = get_print_options(args.zoom)
     
     pdf_pages = [
         get_cover_pdf(driver, print_options, args.title),
@@ -383,6 +382,13 @@ def configure_cli() -> argparse.Namespace:
         "--title", "-t",
         help="Optionally pass a custom title for the cover.",
         default="Documentation",
+    )
+
+    parser.add_argument(
+        "--zoom", "-z",
+        help="How much to scale the page. Defaults to 0.9.",
+        default=0.9,
+        type=float,
     )
 
     return parser.parse_args()

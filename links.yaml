@@ -457,3 +457,23 @@ langraph_tutorials:
   - https://langchain-ai.github.io/langgraph/tutorials/auth/getting_started/
   - https://langchain-ai.github.io/langgraph/tutorials/auth/resource_auth/
   - https://langchain-ai.github.io/langgraph/tutorials/auth/add_auth_server/
+
+openai_concepts:
+  - https://platform.openai.com/docs/overview
+  - https://platform.openai.com/docs/quickstart?api-mode=chat
+  - https://platform.openai.com/docs/models
+  - https://platform.openai.com/docs/pricing
+  - https://platform.openai.com/docs/libraries
+  - https://platform.openai.com/docs/guides/text?api-mode=chat
+  - https://platform.openai.com/docs/guides/images?api-mode=chat
+  - https://platform.openai.com/docs/guides/structured-outputs?api-mode=chat
+  - https://platform.openai.com/docs/guides/function-calling?api-mode=chat
+  - https://platform.openai.com/docs/guides/conversation-state?api-mode=chat
+  - https://platform.openai.com/docs/guides/streaming-responses?api-mode=chat
+  - https://platform.openai.com/docs/guides/pdf-files
+  - https://platform.openai.com/docs/guides/reasoning?api-mode=chat
+  - https://platform.openai.com/docs/guides/tools?api-mode=chat
+  - https://platform.openai.com/docs/guides/tools-web-search?api-mode=chat
+  - https://platform.openai.com/docs/guides/tools-file-search
+  - https://platform.openai.com/docs/guides/tools-computer-use
+  - https://platform.openai.com/docs/guides/agents
